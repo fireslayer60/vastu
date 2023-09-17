@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vastu/pages/signupPage.dart';
 
 class MyWidget extends StatelessWidget {
   const MyWidget({super.key});
@@ -40,28 +41,31 @@ class MyWidget extends StatelessWidget {
                   ])),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(
-                          backgroundColor: Colors.transparent,
-                          shadowColor: Colors.transparent),
-                      child: Text(
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => signUpPage()));
+                  },
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
                         'DIVE IN',
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
-                    ),
-                    Icon(
-                      Icons.arrow_forward,
-                      color: Colors.white,
-                      size: 30,
-                    )
-                  ],
+                      Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                        size: 30,
+                      )
+                    ],
+                  ),
                 ),
               ),
-            )
+            ),
           ]),
         ),
       ),
