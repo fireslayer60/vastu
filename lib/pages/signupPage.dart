@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:vastu/pages/loginPage.dart';
+import 'package:vastu/pages/registerPage.dart';
 
 class signUpPage extends StatefulWidget {
   const signUpPage({super.key});
@@ -72,7 +74,7 @@ class _signUpPageState extends State<signUpPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => signUpPage()));
+                                  builder: (context) => LoginPage()));
                         },
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.transparent,
@@ -105,7 +107,12 @@ class _signUpPageState extends State<signUpPage> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
                         side: BorderSide(color: Color(0xFFE35629))),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => registerPage()));
+                    },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5),
                       child: Row(
