@@ -1,4 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:vastu/pages/services/auth_service.dart';
+
+import 'HomePage.dart';
 
 class registerPage extends StatefulWidget {
   const registerPage({super.key});
@@ -8,6 +12,10 @@ class registerPage extends StatefulWidget {
 }
 
 class _registerPageState extends State<registerPage> {
+  final _auth = FirebaseAuth.instance;
+  bool showSpinner = false;
+  final emailtextController = TextEditingController();
+  final passtextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -48,6 +56,7 @@ class _registerPageState extends State<registerPage> {
                       ),
                       child: Center(
                         child: TextFormField(
+                          controller: emailtextController,
                           keyboardType: TextInputType.emailAddress,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
@@ -72,6 +81,8 @@ class _registerPageState extends State<registerPage> {
                       ),
                       child: Center(
                         child: TextFormField(
+                          obscureText: false,
+                          controller: passtextController,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: '   Password',
@@ -97,7 +108,28 @@ class _registerPageState extends State<registerPage> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () async {
+                          setState(() {
+                            showSpinner = true;
+                          });
+                          try {
+                            final newuser =
+                                await _auth.createUserWithEmailAndPassword(
+                                    email: emailtextController.text,
+                                    password: passtextController.text);
+                            if (newuser != null) {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomePage()));
+                            }
+                          } catch (e) {
+                            print(e);
+                          }
+                          setState(() {
+                            showSpinner = false;
+                          });
+                        },
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent),
@@ -136,6 +168,29 @@ class _registerPageState extends State<registerPage> {
                     child: SizedBox(
                       height: 2,
                       width: 300,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  GestureDetector(
+                    onTap: () async {
+                      try {
+                        final User = await AuthService().signInWithGoogle();
+                        if (User != null) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()));
+                        }
+                      } catch (e) {
+                        print(e);
+                      }
+                    },
+                    child: Image(
+                      image: AssetImage("lib/images/google.png"),
+                      height: 40,
+                      width: 40,
                     ),
                   ),
                   Container()
