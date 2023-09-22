@@ -14,39 +14,42 @@ class LargeCard extends StatelessWidget {
       height: 120,
       width: 140,
       child: Container(
-        child: Stack(children: [
-          Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
-            child: Image(
-              image: AssetImage("lib/images/image$img.png"),
-              width: 160,
-              fit: BoxFit.fill,
-            ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          image: DecorationImage(
+            image: AssetImage("lib/images/image$img.png"),
+            fit: BoxFit.cover,
           ),
-          Container(
-            padding: EdgeInsets.only(bottom: 20, left: 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  upper,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500),
-                ),
-                Text(
-                  lower,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
-                      fontWeight: FontWeight.w500),
-                )
-              ],
-            ),
+        ),
+        child: Container(
+          padding: EdgeInsets.only(bottom: 20, left: 10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                upper,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500),
+              ),
+              Text(
+                lower,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w500),
+              )
+            ],
           ),
-        ]),
+        ),
       ),
     );
   }
 }
+/*Image(
+              image: AssetImage("lib/images/image$img.png"),
+              width: 160,
+              fit: BoxFit.fill,
+            ),
+          ),*/

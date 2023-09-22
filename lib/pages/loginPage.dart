@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:vastu/pages/HomePage.dart';
+import 'package:vastu/pages/mainPage/HomePage.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+import 'package:vastu/pages/mainPage/martPage.dart';
+import 'package:vastu/pages/mainPage/yoPage.dart';
 import 'package:vastu/pages/services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
@@ -124,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => HomePage()));
+                                        builder: (context) => MartPage()));
                               }
                             } catch (e) {
                               print(e);
@@ -184,7 +186,7 @@ class _LoginPageState extends State<LoginPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomePage()));
+                                    builder: (context) => yoWidget()));
                           }
                         } catch (e) {
                           print(e);

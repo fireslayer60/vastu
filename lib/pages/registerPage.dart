@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vastu/pages/services/auth_service.dart';
 
-import 'HomePage.dart';
+import 'mainPage/HomePage.dart';
 
 class registerPage extends StatefulWidget {
   const registerPage({super.key});

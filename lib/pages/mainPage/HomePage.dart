@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vastu/components/largecard.dart';
 
-import '../components/smallcard.dart';
+import '../../components/smallcard.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -132,8 +132,8 @@ class tilescroll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(5),
-      height: 120,
+      padding: EdgeInsets.all(4),
+      height: 115,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: yo2.length,
