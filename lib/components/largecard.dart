@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vastu/pages/mainPage/shopPages/BananresPage.dart';
 
 class LargeCard extends StatelessWidget {
   const LargeCard(
@@ -10,37 +11,43 @@ class LargeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 120,
-      width: 140,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => BanaresPage()));
+      },
       child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          image: DecorationImage(
-            image: AssetImage("lib/images/image$img.png"),
-            fit: BoxFit.cover,
-          ),
-        ),
+        height: 120,
+        width: 140,
         child: Container(
-          padding: EdgeInsets.only(bottom: 20, left: 10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                upper,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500),
-              ),
-              Text(
-                lower,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 10,
-                    fontWeight: FontWeight.w500),
-              )
-            ],
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            image: DecorationImage(
+              image: AssetImage("lib/images/image$img.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Container(
+            padding: EdgeInsets.only(bottom: 20, left: 10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  upper,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  lower,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
           ),
         ),
       ),

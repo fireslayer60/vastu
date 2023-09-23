@@ -19,9 +19,9 @@ class _SmallCardState extends State<SmallCard> {
       height: 41,
       width: 100,
       decoration: BoxDecoration(
-        border: Border.all(color: Color(0xFFFC602E)),
+        border: Border.all(color: Color(0xFF1A9EB0)),
         borderRadius: BorderRadius.circular(20.5),
-        color: isSelected ? Color(0xFFFC602E) : Colors.white,
+        color: isSelected ? Color(0xFF1A9EB0) : Color(0xFF17181D),
       ),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
@@ -35,7 +35,7 @@ class _SmallCardState extends State<SmallCard> {
         child: Text(
           widget.text,
           style:
-              TextStyle(color: isSelected ? Colors.white : Color(0xFFFC602E)),
+              TextStyle(color: isSelected ? Colors.white : Color(0xFF1A9EB0)),
         ),
       ),
     );

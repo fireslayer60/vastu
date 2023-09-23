@@ -20,7 +20,7 @@ class _yoWidgetState extends State<yoWidget> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         body: yoo[selectedIn],
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF17181D),
         bottomNavigationBar: GNav(
           onTabChange: (value) {
             setState(() {
@@ -28,26 +28,30 @@ class _yoWidgetState extends State<yoWidget> {
             });
           },
           selectedIndex: selectedIn,
-          backgroundColor: Color(0xFFFC602E),
-          activeColor: Colors.white,
-          tabBackgroundColor: Colors.white.withOpacity(0.3),
+          backgroundColor: Color(0xFF17181D),
+          activeColor: Color(0xFF1A9EB0),
+          tabBackgroundColor: Colors.white.withOpacity(0.99),
           gap: 8,
           tabs: [
             GButton(
               icon: Icons.home,
               text: "Home",
+              iconColor: Colors.white,
             ),
             GButton(
-              icon: Icons.search,
+              icon: Icons.shop,
               text: "Shop",
+              iconColor: Colors.white,
             ),
             GButton(
-              icon: Icons.shop_2,
+              icon: Icons.shopping_cart,
               text: "Cart",
+              iconColor: Colors.white,
             ),
             GButton(
               icon: Icons.person,
               text: "Profile",
+              iconColor: Colors.white,
             ),
           ],
         ),

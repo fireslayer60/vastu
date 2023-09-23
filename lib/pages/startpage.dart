@@ -8,22 +8,30 @@ class MyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      backgroundColor: Color(0xFF17181D),
       body: Container(
         padding: EdgeInsets.only(bottom: 50),
         child: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            const Image(
-              image: AssetImage("lib/images/image.png"),
-              height: 207,
-              width: 207,
-            ),
+            Stack(alignment: Alignment.center, children: [
+              Image(
+                image: AssetImage("lib/images/image (16).png"),
+                height: 207,
+                width: 207,
+              ),
+              Image(
+                image: AssetImage("lib/images/image (17).png"),
+                height: 104,
+                width: 148,
+              )
+            ]),
             const SizedBox(
               height: 20,
             ),
             const Text(
               "VASTU",
               style: TextStyle(
-                  color: Color(0xFFE35629),
+                  color: Colors.white,
                   fontSize: 48,
                   fontWeight: FontWeight.w400),
             ),
@@ -35,10 +43,7 @@ class MyWidget extends StatelessWidget {
               width: 265,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  gradient: LinearGradient(colors: [
-                    Color(0xFFE35629),
-                    Color(0xFFA6FF60).withOpacity(0.5)
-                  ])),
+                  color: Color(0xFF1A9EB0)),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: TextButton(

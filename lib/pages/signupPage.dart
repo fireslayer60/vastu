@@ -27,7 +27,7 @@ class _signUpPageState extends State<signUpPage> {
             padding: const EdgeInsets.only(top: 400),
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Color(0xFF17181D),
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(50),
                       topRight: Radius.circular(50))),
@@ -43,7 +43,7 @@ class _signUpPageState extends State<signUpPage> {
                     child: Text(
                       "Let's expolre our Traditional ",
                       style: TextStyle(
-                          color: Color(0xFFE35629),
+                          color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.w400),
                     ),
@@ -51,7 +51,7 @@ class _signUpPageState extends State<signUpPage> {
                   Text(
                     "market ",
                     style: TextStyle(
-                        color: Color(0xFFE35629),
+                        color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.w400),
                   ),
@@ -63,10 +63,7 @@ class _signUpPageState extends State<signUpPage> {
                     width: 265,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        gradient: LinearGradient(colors: [
-                          Color(0xFFE35629),
-                          Color(0xFFA6FF60).withOpacity(0.5)
-                        ])),
+                        color: Color(0xFF1A9EB0)),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: TextButton(
@@ -106,7 +103,7 @@ class _signUpPageState extends State<signUpPage> {
                         shape: RoundedRectangleBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
-                        side: BorderSide(color: Color(0xFFE35629))),
+                        side: BorderSide(color: Color(0xFF1A9EB0))),
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -120,11 +117,11 @@ class _signUpPageState extends State<signUpPage> {
                         children: [
                           Text(
                             'SIGN UP',
-                            style: TextStyle(color: Colors.black, fontSize: 18),
+                            style: TextStyle(color: Colors.white, fontSize: 18),
                           ),
                           Icon(
                             Icons.arrow_forward,
-                            color: Colors.black,
+                            color: Colors.white,
                             size: 30,
                           )
                         ],
@@ -137,7 +134,7 @@ class _signUpPageState extends State<signUpPage> {
                     },
                     child: Text(
                       'Not now',
-                      style: TextStyle(color: Color(0xFFE35629), fontSize: 13),
+                      style: TextStyle(color: Colors.white, fontSize: 13),
                     ),
                   )
                 ],

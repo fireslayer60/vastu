@@ -34,7 +34,7 @@ class _registerPageState extends State<registerPage> {
             padding: const EdgeInsets.only(top: 300),
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Color(0xFF17181D),
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(50),
                       topRight: Radius.circular(50))),
@@ -51,7 +51,7 @@ class _registerPageState extends State<registerPage> {
                       height: 60,
                       width: 265,
                       decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xFFE35629)),
+                        border: Border.all(color: Color(0xFF1A9EB0)),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Center(
@@ -61,6 +61,7 @@ class _registerPageState extends State<registerPage> {
                           decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: '   Email',
+                            hintStyle: TextStyle(color: Colors.white),
                             suffixIcon: Icon(Icons.check, color: Colors.grey),
                           ),
                         ),
@@ -76,7 +77,7 @@ class _registerPageState extends State<registerPage> {
                       height: 60,
                       width: 265,
                       decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xFFE35629)),
+                        border: Border.all(color: Color(0xFF1A9EB0)),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Center(
@@ -85,6 +86,7 @@ class _registerPageState extends State<registerPage> {
                           controller: passtextController,
                           decoration: const InputDecoration(
                             border: InputBorder.none,
+                            hintStyle: TextStyle(color: Colors.white),
                             hintText: '   Password',
                             suffixIcon: Icon(Icons.visibility_off_outlined,
                                 color: Colors.grey),
@@ -101,10 +103,7 @@ class _registerPageState extends State<registerPage> {
                     width: 265,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        gradient: LinearGradient(colors: [
-                          Color(0xFFE35629),
-                          Color(0xFFA6FF60).withOpacity(0.5)
-                        ])),
+                        color: Color(0xFF1A9EB0)),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: TextButton(
@@ -157,14 +156,14 @@ class _registerPageState extends State<registerPage> {
                   Text(
                     'OR',
                     style: TextStyle(
-                      color: Color(0xFFE35629),
+                      color: Color(0xFF1A9EB0),
                     ),
                   ),
                   SizedBox(
                     height: 5,
                   ),
                   Container(
-                    color: Color(0xFFE35629),
+                    color: Color(0xFF1A9EB0),
                     child: SizedBox(
                       height: 2,
                       width: 300,

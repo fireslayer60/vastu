@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:vastu/components/largecard.dart';
 
 import '../../components/smallcard.dart';
+import 'martPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,23 +28,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF17181D),
         body: Column(children: [
           Image(image: AssetImage("lib/images/image2.png")),
-          SizedBox(
-            height: 43,
-          ),
-          SizedBox(
-            child: Container(color: Color(0xFF252323)),
-            height: 1,
-            width: 390,
-          ),
           Container(
             alignment: Alignment.centerLeft,
             padding: EdgeInsets.only(left: 20, top: 5),
             child: Text(
               "Discover",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white),
             ),
           ),
           Container(
@@ -64,27 +60,31 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           ),
-          Container(
-            padding: EdgeInsets.only(right: 20),
-            height: 30,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  "See all",
-                  style: TextStyle(fontSize: 10),
-                ),
-                Icon(
-                  Icons.arrow_forward,
-                  size: 15,
-                  color: Color(0xFFFC602E),
-                )
-              ],
+          GestureDetector(
+            onTap: () => Navigator.push(
+                context, MaterialPageRoute(builder: (context) => MartPage())),
+            child: Container(
+              padding: EdgeInsets.only(right: 20),
+              height: 30,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "See all",
+                    style: TextStyle(fontSize: 10, color: Colors.white),
+                  ),
+                  Icon(
+                    Icons.arrow_forward,
+                    size: 15,
+                    color: Colors.white,
+                  )
+                ],
+              ),
             ),
           ),
           tilescroll(yo2: yo2),
           SizedBox(
-            child: Container(color: Color(0xFF252323)),
+            child: Container(color: Colors.white),
             height: 1,
             width: 390,
           ),
@@ -94,20 +94,27 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Discover",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  "Trending",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      "See all",
-                      style: TextStyle(fontSize: 10),
+                    GestureDetector(
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MartPage())),
+                      child: Text(
+                        "See all",
+                        style: TextStyle(fontSize: 10, color: Colors.white),
+                      ),
                     ),
                     Icon(
                       Icons.arrow_forward,
                       size: 15,
-                      color: Color(0xFFFC602E),
+                      color: Colors.white,
                     )
                   ],
                 ),
@@ -133,7 +140,7 @@ class tilescroll extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(4),
-      height: 115,
+      height: 140,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: yo2.length,
