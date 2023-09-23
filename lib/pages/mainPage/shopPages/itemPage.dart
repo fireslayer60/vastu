@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vastu/pages/mainPage/shopPages/BananresPage.dart';
 
 class ItemPage1 extends StatefulWidget {
   ItemPage1({Key? key}) : super(key: key);
@@ -53,6 +54,7 @@ class _ItemPage1State extends State<ItemPage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xFF17181D),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -155,7 +157,10 @@ class _ItemPage1State extends State<ItemPage1> {
                     ),
                     trailing: GestureDetector(
                       onTap: () {
-                        // Add your action when clicking "See Sellers"
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BanaresPage()));
                       },
                       child: Container(
                         width: 90,

@@ -53,6 +53,7 @@ class _ItemPage3State extends State<ItemPage3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xFF17181D),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
