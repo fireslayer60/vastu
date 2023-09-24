@@ -7,6 +7,7 @@ class BanaresPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      backgroundColor: Color(0xFF17181D),
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Color(0xFF1A9EB0),
@@ -46,7 +47,6 @@ class BanaresPage extends StatelessWidget {
             height: 200,
             width: 420,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
               image: DecorationImage(
                 image: AssetImage("lib/images/saree1.png"),
                 fit: BoxFit.cover,
@@ -86,7 +86,7 @@ class BanaresPage extends StatelessWidget {
             padding: EdgeInsets.only(top: 10, left: 20),
             child: Text(
               "See top deals",
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           ),
           Container(

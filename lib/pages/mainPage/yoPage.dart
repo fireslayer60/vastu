@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:vastu/pages/mainPage/HomePage.dart';
+import 'package:vastu/pages/mainPage/cartPage.dart';
 import 'package:vastu/pages/mainPage/martPage.dart';
+import 'package:vastu/pages/mainPage/profilePage.dart';
 
 class yoWidget extends StatefulWidget {
   const yoWidget({super.key});
@@ -12,7 +14,7 @@ class yoWidget extends StatefulWidget {
 
 class _yoWidgetState extends State<yoWidget> {
   int selectedIn = 0;
-  List<Widget> yoo = [HomePage(), MartPage(), Text("yo"), Text("yoo")];
+  List<Widget> yoo = [HomePage(), MartPage(), CartPage(), ProfilePage()];
 
   @override
   Widget build(BuildContext context) {
