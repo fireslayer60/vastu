@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+An E- Commerce app made with flutter. Please use all the latest version of libraries to run the app.
 
 A few resources to get you started if this is your first Flutter project:
 
